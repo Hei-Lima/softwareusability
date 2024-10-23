@@ -14,33 +14,33 @@
         
         <div class="mb-4">
             <label class="block text-gray-700">Qual é a comida que você mais gosta?</label>
-            <input type="text" class="input input-bordered w-full" placeholder="Ex: Marrom" minlength="1" required>
+            <input type="text" class="input input-bordered w-full" placeholder="Ex: Pizza" minlength="1" required>
         </div>
         
         <div class="mb-4">
             <label class="block text-gray-700">Qual é o nome do seu melhor amigo? Se preferir, escreva qualquer coisa.</label>
-            <input type="text" class="input input-bordered w-full" placeholder="Ex: Joana da Silva" minlength="1" required>
+            <input type="text" class="input input-bordered w-full" placeholder="Ex: João da Silva" minlength="1" required>
         </div>
         
         <div class="mb-4">
             <label class="block text-gray-700">Você nasceu em qual dia?</label>
-            <input type="number" class="input input-bordered w-full" placeholder="Ex: Dezembro" min="0" max="31" required>
+            <input type="number" class="input input-bordered w-full" placeholder="Ex: 15" min="1" max="31" required>
         </div>
         
         <div class="mb-4">
             <label class="block text-gray-700">Qual é o seu maior medo? Se não tiver nenhum, digite "nenhum"</label>
-            <input type="text" class="input input-bordered w-full" placeholder="Ex: Batman" minlength="1" required>
+            <input type="text" class="input input-bordered w-full" placeholder="Ex: Altura" minlength="1" required>
         </div>
         
         <div class="mb-4">
-            <label class="block text-gray-700">Você prefere qual sabor de Pizza?</label>
+            <label class="block text-gray-700">Você prefere qual sabor de pizza?</label>
             <div class="flex items-center">
-                <input type="radio" id="morango" name="sabor" value="morango" class="radio radio-primary" required>
-                <label for="morango" class="ml-2">Calabresa</label>
+                <input type="radio" id="calabresa" name="sabor" value="calabresa" class="radio radio-primary" required>
+                <label for="calabresa" class="ml-2">Calabresa</label>
             </div>
             <div class="flex items-center mt-2">
-                <input type="radio" id="caramelo" name="sabor" value="caramelo" class="radio radio-primary" required>
-                <label for="caramelo" class="ml-2">Frango</label>
+                <input type="radio" id="frango" name="sabor" value="frango" class="radio radio-primary" required>
+                <label for="frango" class="ml-2">Frango</label>
             </div>
         </div>
         
@@ -50,7 +50,7 @@
         function validateForm() {
             const form = document.querySelector('form');
             if (form.checkValidity()) {
-                window.location.href = 'pagina_3.html';
+                window.location.href = 'pagina_4.html';
                 return false; // Prevent default form submission
             }
             return false; // Prevent default form submission if validation fails
