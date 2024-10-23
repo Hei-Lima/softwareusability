@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+    <link rel="stylesheet" href="css/2.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .centered-form {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <form class="centered-form">
+        <h2>Página 2 - responda as perguntas</h2>
+        <div>
+            <label for="input">Qual é o nome da sua mãe? Se preferir, escreva qualquer coisa.</label><br>
+            <input type="text" minlength="1" placeholder="Ex: Joana da Silva"><br><br>
+        </div>
+        <div>
+            <label for="sabor">Você prefere qual sabor de sorvete?</label><br>
+            <input type="radio" id="baunilha" name="sabor" value="baunilha">
+            <label for="baunilha">Morango</label>
+            <input type="radio" id="chocolate" name="sabor" value="chocolate">
+            <label for="chocolate">Caramelo</label><br><br>  
+        </div>
+        <div>
+            <label for="input">Qual é a cor que você menos gosta?</label><br>
+            <input type="text" minlength="1" placeholder="Ex: Marrom"><br><br>
+        </div>
+        <div>
+            <label for="input">Qual é o nome de um de seus personagens ficticios favoritos, se tiver algum? Se não tiver, escreva "Não tenho"</label><br>
+            <input type="text" minlength="1" placeholder="Ex: Batman"><br><br>
+        </div>
+        <div>
+            <label for="input">Você nasceu em qual mês?</label><br>
+            <input type="text" minlength="1" placeholder="Ex: Dezembro"><br><br>
+        </div>
+        <input type="button" value="Enviar" onclick="window.location.href='pagina_3.html';">
+    </form>
+</body>
+</html>
