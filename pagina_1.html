@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,33 @@
 </head>
 <body>
     <center>
-    <form>
-        <h2>Página 1 -  responda as perguntas</h2>
+    <form onsubmit="return validateForm()">
+        <h2>Página 1 - responda às perguntas</h2>
         <label for="input">Você nasceu em qual ano?</label>
-        <input type="text" minlength="1"><br>
+        <input type="text" minlength="1" required><br>
         <label for="input">Qual é o nome do seu pai? Se preferir, escreva qualquer coisa.</label>
-        <input type="text" minlength="1"><br>
+        <input type="text" minlength="1" required><br>
         <label for="input">Qual é a sua cor favorita?</label>
-        <input type="text" minlength="1"><br>
+        <input type="text" minlength="1" required><br>
         <label for="sabor">Você prefere qual sabor de sorvete?</label>
-            <input type="radio" id="baunilha" name="sabor" value="baunilha">
+            <input type="radio" id="baunilha" name="sabor" value="baunilha" required>
             <label for="baunilha">Baunilha</label>
-            <input type="radio" id="chocolate" name="sabor" value="chocolate">
+            <input type="radio" id="chocolate" name="sabor" value="chocolate" required>
             <label for="chocolate">Chocolate</label><br>  
         <label for="input">Qual é o nome de um dos seus animais de estimação, se tiver algum? Se não tiver, escreva "Não tenho"</label>
-        <input type="text" minlength="1"><br>
-        <input type="button" value="Enviar" onclick="window.location.href='pagina_2.html';">
+        <input type="text" minlength="1" required><br>
+        <input type="submit" value="Enviar">
     </form>
-</center>
+    </center>
+    <script>
+        function validateForm() {
+            const form = document.querySelector('form');
+            if (form.checkValidity()) {
+                window.location.href = 'pagina_2.html';
+                return false; // Prevent default form submission
+            }
+            return false; // Prevent default form submission if validation fails
+        }
+    </script>
 </body>
 </html>

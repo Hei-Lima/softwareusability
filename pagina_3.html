@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 3</title>
+    <html data-theme="corporate"></html>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-100">
+    <form class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md" onsubmit="return validateForm()">
+        <h2 class="text-2xl font-bold mb-4">Página 3 - Responda as perguntas</h2>
+        
+        <div class="mb-4">
+            <label class="block text-gray-700">Qual é a comida que você mais gosta?</label>
+            <input type="text" class="input input-bordered w-full" placeholder="Ex: Marrom" minlength="1" required>
+        </div>
+        
+        <div class="mb-4">
+            <label class="block text-gray-700">Qual é o nome do seu melhor amigo? Se preferir, escreva qualquer coisa.</label>
+            <input type="text" class="input input-bordered w-full" placeholder="Ex: Joana da Silva" minlength="1" required>
+        </div>
+        
+        <div class="mb-4">
+            <label class="block text-gray-700">Você nasceu em qual dia?</label>
+            <input type="number" class="input input-bordered w-full" placeholder="Ex: Dezembro" min="0" max="31" required>
+        </div>
+        
+        <div class="mb-4">
+            <label class="block text-gray-700">Qual é o seu maior medo? Se não tiver nenhum, digite "nenhum"</label>
+            <input type="text" class="input input-bordered w-full" placeholder="Ex: Batman" minlength="1" required>
+        </div>
+        
+        <div class="mb-4">
+            <label class="block text-gray-700">Você prefere qual sabor de Pizza?</label>
+            <div class="flex items-center">
+                <input type="radio" id="morango" name="sabor" value="morango" class="radio radio-primary" required>
+                <label for="morango" class="ml-2">Calabresa</label>
+            </div>
+            <div class="flex items-center mt-2">
+                <input type="radio" id="caramelo" name="sabor" value="caramelo" class="radio radio-primary" required>
+                <label for="caramelo" class="ml-2">Frango</label>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary w-full">Enviar</button>
+    </form>
+    <script>
+        function validateForm() {
+            const form = document.querySelector('form');
+            if (form.checkValidity()) {
+                window.location.href = 'pagina_3.html';
+                return false; // Prevent default form submission
+            }
+            return false; // Prevent default form submission if validation fails
+        }
+    </script>
+</body>
+</html>
